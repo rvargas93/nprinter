@@ -1,0 +1,15 @@
+#!/usr/bin/php
+<?php
+
+require('./NumberBuilder.php');
+
+$last = 111;
+
+for ($i = 1; $i <= $last; $i++) {
+    $isLast = $i === $last;
+    NumberBuilder::build($i, $isLast)->print();
+
+    if ($isLast) {
+        echo "\n";
+    }
+}
